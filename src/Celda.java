@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JComponent;
 
@@ -28,14 +29,22 @@ public class Celda extends JComponent implements Constantes{
     @Override
     public void paintComponent(Graphics g){
         switch(tipo){
-            case 'J':g.setColor(COLOR_JUGADOR);break;
+            case 'J':
+                g.setColor(Color.BLACK);
+                g.drawString(String.valueOf(Jugador.energia), x + 10, y - 10);
+                g.setColor(COLOR_JUGADOR);break;
             case 'O':g.setColor(COLOR_OBSTACULO);break;
             case 'V':g.setColor(COLOR_CAMINO);break;
             case 'A':g.setColor(COLOR_ADVERSARIO);break;
             case 'F':g.setColor(COLOR_FINAL);break;
+            case 'R':g.setColor(Color.PINK);break;
        
         }
         g.fillRect(x, y, PIXEL_CELDA, PIXEL_CELDA);
     
+    }
+
+    void esRecompensa() {
+        tipo='R';
     }
 }

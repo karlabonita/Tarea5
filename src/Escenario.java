@@ -17,6 +17,9 @@ public class Escenario extends JComponent implements Constantes {
         for(int i=0; i<NUMERO_CELDAS_ANCHO; i++)
                  for(int j=0; j< NUMERO_CELDAS_LARGO;j++)
                 celdas[i][j]= new Celda(i+(i*PIXEL_CELDA),j+(j*PIXEL_CELDA),'V');
+        celdas[2][2].esRecompensa();
+        celdas[6][1].esRecompensa();
+        celdas[6][2].esRecompensa();  //LINEA PARA DETENER 
         celdas[5][3].esPared();
         celdas[5][4].esPared();
         celdas[5][5].esPared();
@@ -35,13 +38,22 @@ public class Escenario extends JComponent implements Constantes {
         
         
     }   
-    
+
     @Override
     public void paintComponent(Graphics g){
         for(int i=0; i<NUMERO_CELDAS_ANCHO; i++)
             for(int j=0; j<NUMERO_CELDAS_LARGO;j++)
                 celdas[i][j].paintComponent(g);
     
+    }
+
+    boolean esRecompensa(int x, int y) {
+        
+        if(this.celdas[x][y].tipo=='R'){
+            return true;
+        }
+        return false;
+        
     }
     
 }

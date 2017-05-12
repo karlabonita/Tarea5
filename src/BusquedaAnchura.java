@@ -135,6 +135,9 @@ public class BusquedaAnchura extends TimerTask implements Constantes{
     @Override
     public synchronized void run(){
         if(index_pasos>=0){
+            if(escenario.jugador.energia<=0){
+                this.cancel();
+            }
              switch(pasos.get(index_pasos)){
                  case 'D': escenario.jugador.moverAbajo(); break;
                  case 'U': escenario.jugador.moverArriba(); break;
@@ -143,6 +146,8 @@ public class BusquedaAnchura extends TimerTask implements Constantes{
              
              }
         
+            
+
              escenario.dondeSeDibuja.repaint();
              index_pasos--;
         }else{
