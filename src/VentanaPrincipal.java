@@ -5,8 +5,7 @@ import javax.swing.JFrame;
 public class VentanaPrincipal extends JFrame implements Constantes {
     
     public Lienzo lienzo;
-    
-    //constrcutor 
+     //constrcutor 
     public VentanaPrincipal(){
         lienzo = new Lienzo();
         this.getContentPane().add(lienzo);
@@ -16,3 +15,4 @@ public class VentanaPrincipal extends JFrame implements Constantes {
     
     
 }
+   

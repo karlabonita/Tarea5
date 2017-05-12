@@ -10,6 +10,7 @@ public class Lienzo extends Canvas implements Constantes {
     
     public Lienzo(){
     
+        
             escenario = new Escenario(this);
             escenario.jugador.inteligencia.buscar(0, 0, 9, 9);
             escenario.jugador.inteligencia.calcularRuta();
