@@ -15,8 +15,9 @@ public class Escenario extends JComponent implements Constantes {
         celdas = new Celda[NUMERO_CELDAS_ANCHO][NUMERO_CELDAS_LARGO];
         //inicializar array
         for(int i=0; i<NUMERO_CELDAS_ANCHO; i++)
-            for(int j=0; j< NUMERO_CELDAS_LARGO;j++)
+                 for(int j=0; j< NUMERO_CELDAS_LARGO;j++)
                 celdas[i][j]= new Celda(i+(i*PIXEL_CELDA),j+(j*PIXEL_CELDA),'V');
+        celdas[5][3].esPared();
         celdas[5][4].esPared();
         celdas[5][5].esPared();
         celdas[4][4].esPared();
