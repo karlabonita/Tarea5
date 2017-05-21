@@ -9,6 +9,7 @@ public class Escenario extends JComponent implements Constantes {
     public Jugador jugador;
     public Lienzo dondeSeDibuja;
     
+    
     public Escenario(Lienzo lienzo){
     
         dondeSeDibuja=lienzo;
