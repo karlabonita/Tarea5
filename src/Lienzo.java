@@ -1,6 +1,7 @@
 
 import java.awt.Canvas;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 import java.util.Timer;
 
 
@@ -21,6 +22,8 @@ public class Lienzo extends Canvas implements Constantes {
             lanzadorTareas=new Timer();
             lanzadorTareas.scheduleAtFixedRate(escenario.jugador.inteligencia, 0, 1000);
     
+            
+            
     }
     
     @Override
@@ -28,4 +31,7 @@ public class Lienzo extends Canvas implements Constantes {
         escenario.paintComponent(g);
     
     }
+    
+    
+    
 }

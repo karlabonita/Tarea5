@@ -9,7 +9,7 @@ public class Estado {
     public Estado(int x, int y, char oper, Estado predecesor) {
         this.x = x;
         this.y = y;
-        this.oper = oper;
+        this.oper = oper; 
         this.predecesor = predecesor;
     }
     

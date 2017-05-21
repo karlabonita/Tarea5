@@ -72,6 +72,8 @@ public class Jugador extends TimerTask implements Constantes {
     
     
     public void run(){
+        
+       
         if(energia>0)
             energia=energia-5;
         

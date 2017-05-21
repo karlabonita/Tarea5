@@ -18,14 +18,16 @@ public class Escenario extends JComponent implements Constantes {
                  for(int j=0; j< NUMERO_CELDAS_LARGO;j++)
                 celdas[i][j]= new Celda(i+(i*PIXEL_CELDA),j+(j*PIXEL_CELDA),'V');
         celdas[2][2].esRecompensa();
-        celdas[6][1].esRecompensa();
-        celdas[6][2].esRecompensa();  //LINEA PARA DETENER 
+        celdas[3][2].esRecompensa();
+        celdas[4][2].esRecompensa();
+        celdas[6][2].esRecompensa();
+        //celdas[6][2].esRecompensa();  //LINEA PARA DETENER 
         celdas[5][3].esPared();
         celdas[5][4].esPared();
         celdas[5][5].esPared();
         celdas[4][4].esPared();
         celdas[3][3].esPared();
-        celdas[3][4].esPared();
+     // celdas[3][4].esPared();
         celdas[3][5].esPared();
         celdas[3][6].esPared();
         celdas[3][7].esPared();
@@ -33,7 +35,9 @@ public class Escenario extends JComponent implements Constantes {
         celdas[3][9].esPared();
         
         //destino
+        
         celdas[9][9].esFinal();
+        
         jugador = new Jugador(this);
         
         

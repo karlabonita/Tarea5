@@ -1,10 +1,11 @@
 
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.TimerTask;
 
 
-public class BusquedaAnchura extends TimerTask implements Constantes{
+public class Adversario extends TimerTask implements Constantes{
 
     public Escenario escenario;
     public ArrayList<Estado> colaEstados;
@@ -17,7 +18,7 @@ public class BusquedaAnchura extends TimerTask implements Constantes{
     public Estado temp;
     public boolean exito;
     
-    public BusquedaAnchura(Escenario escenario){
+    public Adversario(Escenario escenario){
         this.escenario=escenario;
         colaEstados = new ArrayList<>();
         historial=new ArrayList<>();
