@@ -138,7 +138,7 @@ public class BusquedaPorAnchuraAdversario extends TimerTask implements Constante
     
     @Override
     public synchronized void run(){
-        
+        buscar(adversario.posicionX, adversario.posicionY,escenario.jugador.posicionX,escenario.jugador.posicionY);
      
         if(index_pasos>=0){
              switch(pasos.get(index_pasos)){

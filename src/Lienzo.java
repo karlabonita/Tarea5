@@ -21,6 +21,7 @@ public class Lienzo extends Canvas implements Constantes {
             escenario.jugador.inteligencia.calcularRuta();
             lanzadorTareas=new Timer();
             lanzadorTareas.scheduleAtFixedRate(escenario.jugador.inteligencia, 0, 1000);
+            lanzadorTareas.scheduleAtFixedRate(escenario.adversario.inteligencia, 0, 1000);
     
             
             

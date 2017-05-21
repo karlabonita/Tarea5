@@ -8,14 +8,14 @@ public class Adversario extends TimerTask implements Constantes {
     public int posicionX;
     public int posicionY;
     public Escenario escenario;
-    public BusquedaAnchura inteligencia;
+    public BusquedaPorAnchuraAdversario inteligencia;
     
     public Adversario(Escenario escenario){
         
         posicionX=0;
         posicionY=0;
         this.escenario=escenario;
-        inteligencia = new BusquedaAnchura(escenario);
+        inteligencia = new BusquedaPorAnchuraAdversario(escenario,this);
     
     }
     
@@ -33,7 +33,7 @@ public class Adversario extends TimerTask implements Constantes {
                  
              }
             escenario.celdas[posicionX][posicionY].tipo='V';
-            escenario.celdas[posicionX][--posicionY].tipo='J';
+            escenario.celdas[posicionX][--posicionY].tipo='A';
         }
     }
     
@@ -42,7 +42,7 @@ public class Adversario extends TimerTask implements Constantes {
             if(escenario.esRecompensa(posicionX,posicionY+1)){
               }
             escenario.celdas[posicionX][posicionY].tipo='V';
-            escenario.celdas[posicionX][++posicionY].tipo='J';
+            escenario.celdas[posicionX][++posicionY].tipo='A';
     
         }
     }
@@ -53,7 +53,7 @@ public class Adversario extends TimerTask implements Constantes {
                  
              }
             escenario.celdas[posicionX][posicionY].tipo='V';
-            escenario.celdas[--posicionX][posicionY].tipo='J';
+            escenario.celdas[--posicionX][posicionY].tipo='A';
             
         }
     }
@@ -64,7 +64,7 @@ public class Adversario extends TimerTask implements Constantes {
                  
              }
             escenario.celdas[posicionX][posicionY].tipo='V';
-            escenario.celdas[++posicionX][posicionY].tipo='J';
+            escenario.celdas[++posicionX][posicionY].tipo='A';
    
         }
     }

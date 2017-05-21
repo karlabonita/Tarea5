@@ -8,6 +8,7 @@ public class Escenario extends JComponent implements Constantes {
     public Celda[][]celdas;
     public Jugador jugador;
     public Lienzo dondeSeDibuja;
+    public Adversario adversario;
     
     
     public Escenario(Lienzo lienzo){
@@ -41,7 +42,9 @@ public class Escenario extends JComponent implements Constantes {
         
         jugador = new Jugador(this);
         
-        
+        adversario = new Adversario(this); 
+        adversario.posicionX=5;
+        adversario.posicionY=6;
     }   
 
     @Override
