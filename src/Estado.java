@@ -5,6 +5,7 @@ public class Estado {
     public int y;
     public char oper;
     public  Estado predecesor;
+    public double calidad;
 
     public Estado(int x, int y, char oper, Estado predecesor) {
         this.x = x;
@@ -32,5 +33,29 @@ public class Estado {
         return "(" +x+ "," + y +")";
     }
     
+     
+    public int compareTo(Object o) {
+        Estado e = (Estado) o;
+        if (this.calidad == e.calidad) {
+            return 0;
+        } else {
+            if (this.calidad > e.calidad) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+    }
+    //distancia a un estado
+    public void distancia(Estado a){
+        double valor;
+        double parte1=Math.pow(this.x-a.x,2);
+        double parte2= Math.pow(this.y-a.y,2);
+        parte1+=parte2;
+        valor=Math.sqrt(parte1);
+        this.calidad+=valor;
+    
+    
+    }
     
 }

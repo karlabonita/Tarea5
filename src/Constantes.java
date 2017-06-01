@@ -18,11 +18,13 @@ public interface Constantes {
     
     //constantes relacionadas con la implementacion de las celdas
     public final char JUGADOR='J';
+    public final char JUGADOR_INFORMADO='I';
     public final char CAMINO='V';
     public final char OBSTACULO='O';
     public final char ADVERSARIO ='A';
     public final char FINAL ='F';
     public final Color COLOR_JUGADOR=Color.BLUE;
+    public final Color COLOR_JUGADOR_INFORMADO=Color.WHITE;
     public final Color COLOR_CAMINO= Color.GREEN;
     public final Color COLOR_OBSTACULO=Color.BLACK;
     public final Color COLOR_ADVERSARIO= Color.RED;

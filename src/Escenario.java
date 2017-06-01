@@ -9,7 +9,7 @@ public class Escenario extends JComponent implements Constantes {
     public Jugador jugador;
     public Lienzo dondeSeDibuja;
     public Adversario adversario;
-    
+    public JugadorInformado jugadorin;
     
     public Escenario(Lienzo lienzo){
     
@@ -19,10 +19,10 @@ public class Escenario extends JComponent implements Constantes {
         for(int i=0; i<NUMERO_CELDAS_ANCHO; i++)
                  for(int j=0; j< NUMERO_CELDAS_LARGO;j++)
                 celdas[i][j]= new Celda(i+(i*PIXEL_CELDA),j+(j*PIXEL_CELDA),'V');
-        celdas[2][2].esRecompensa();
-        celdas[3][2].esRecompensa();
-        celdas[4][2].esRecompensa();
-        celdas[6][2].esRecompensa();
+        //celdas[2][2].esRecompensa();
+        //celdas[3][2].esRecompensa();
+        //celdas[4][2].esRecompensa();
+        //celdas[6][2].esRecompensa();
         //celdas[6][2].esRecompensa();  //LINEA PARA DETENER 
         celdas[5][3].esPared();
         celdas[5][4].esPared();
@@ -40,7 +40,9 @@ public class Escenario extends JComponent implements Constantes {
         
         celdas[9][9].esFinal();
         
-        jugador = new Jugador(this);
+        
+        jugadorin=new JugadorInformado(this);
+    //    jugador = new Jugador(this);
         
         adversario = new Adversario(this); 
         adversario.posicionX=5;
